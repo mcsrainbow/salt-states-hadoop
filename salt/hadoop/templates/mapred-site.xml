@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!--- File Managed by Salt -->
+
+<configuration>
+<property>
+  <name>mapred.job.tracker</name>
+  <value>hdfs://{{ pillar['hadoop']['mapred_job_tracker'] }}:8021</value>
+</property>
+<property>
+  <name>mapred.system.dir</name>
+  <value>{{ pillar['hadoop']['mapred_system_dir'] }}</value>
+</property>
+</configuration>

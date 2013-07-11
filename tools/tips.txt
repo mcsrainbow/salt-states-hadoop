@@ -1,0 +1,8 @@
+Refresh pillars on all minions from master:
+  sudo salt '*' saltutil.refresh_pillar
+
+Trigger states on all minions from master:
+  sudo salt '*' state.highstate
+
+Trigger states on single minion:
+  sudo salt-call state.highstate

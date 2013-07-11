@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!--- File Managed by Salt -->
+
+<configuration>
+
+<!-- Hive Configuration can either be stored in this file or in the hadoop configuration files  -->
+<!-- that are implied by Hadoop setup variables.                                                -->
+<!-- Aside from Hadoop setup variables - this file is provided as a convenience so that Hive    -->
+<!-- users do not have to edit hadoop configuration files (that may be managed as a centralized -->
+<!-- resource).                                                                                 -->
+
+<!-- Hive Execution Parameters -->
+
+<property>
+  <name>javax.jdo.option.ConnectionURL</name>
+  <value>jdbc:mysql://{{ pillar['hadoop']['hive_server'] }}:3306/metastore</value>
+</property>
+
+<property>
+  <name>javax.jdo.option.ConnectionDriverName</name>
+  <value>com.mysql.jdbc.Driver</value>
+</property>
+
+<property>
+  <name>javax.jdo.option.ConnectionUserName</name>
+  <value>{{ pillar['hadoop']['hive_user'] }}</value>
+</property>
+
+<property>
+  <name>javax.jdo.option.ConnectionPassword</name>
+  <value>{{ pillar['hadoop']['hive_password'] }}</value>
+</property>
+
+<property>
+  <name>datanucleus.autoCreateSchema</name>
+  <value>false</value>
+</property>
+
+<property>
+  <name>datanucleus.fixedDatastore</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>hive.stats.autogather</name>
+  <value>false</value>
+</property>
+
+<property>
+  <name>hive.aux.jars.path</name>
+  <value>file:///usr/lib/hive/lib/hive-hbase-handler-0.7.1-cdh3u6.jar,file:///usr/lib/hbase/hbase-0.90.6-cdh3u6.jar,file:///usr/lib/zookeeper/zookeeper-3.3.5-cdh3u6.jar</value> 
+</property>
+
+<property>
+  <name>hbase.zookeeper.quorum</name>
+  <value>{% for zookeeper in pillar['hadoop']['zookeeper_quorum'].split() %}{{ zookeeper + ',' }}{% endfor %}</value>
+</property>
+</configuration>

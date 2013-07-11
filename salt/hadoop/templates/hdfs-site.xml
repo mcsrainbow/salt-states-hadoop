@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!--- File Managed by Salt -->
+
+<configuration>
+<property>
+  <name>dfs.data.dir</name>
+  <value>{{ pillar['hadoop']['dfs_data_dir'] }}</value>
+</property>
+<property>
+  <name>dfs.replication</name>
+  <value>{{ pillar['hadoop']['dfs_replication'] }}</value>
+</property>
+<property>
+  <name>dfs.datanode.max.xcievers</name>
+  <value>4096</value>
+</property>
+
+<property>
+  <name>dfs.namenode.secondary.http-address</name>
+  <value>{{ pillar['hadoop']['secondarynamenode'] }}:50090</value>
+</property>
+</configuration>

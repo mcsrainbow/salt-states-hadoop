@@ -1,0 +1,8 @@
+# File Managed by Salt
+
+[cloudera-cdh3u6]
+# Packages for Cloudera's Distribution for Hadoop, Version 3 Update 6, on RedHat or CentOS 6
+name=Cloudera's Distribution for Hadoop, Version 3 Update 6
+mirrorlist=http://archive.cloudera.com/redhat/6/x86_64/cdh/3u6/mirrors
+gpgkey = http://archive.cloudera.com/redhat/6/x86_64/cdh/RPM-GPG-KEY-cloudera    
+gpgcheck = 1
