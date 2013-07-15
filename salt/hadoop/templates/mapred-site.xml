@@ -12,4 +12,8 @@
   <name>mapred.system.dir</name>
   <value>{{ pillar['hadoop']['mapred_system_dir'] }}</value>
 </property>
+<property>
+  <name>mapreduce.jobtracker.staging.root.dir</name>
+  <value>{{ pillar['hadoop']['mapreduce_jobtracker_staging_root_dir'] }}</value>
+</property>
 </configuration>

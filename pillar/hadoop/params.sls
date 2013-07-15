@@ -12,6 +12,7 @@ hadoop:
   # JobTracker
   mapred_job_tracker: ip-10-197-34-238.us-west-1.compute.internal
   mapred_system_dir: /mapred/system
+  mapreduce_jobtracker_staging_root_dir: /user
   # JDK
   java_home: /usr/java/jdk1.6.0_41
   # Zookeeper
