@@ -16,7 +16,8 @@ echo "..."
 for BLACKLISTED_COMMAND in ${BLACKLIST[@]} ; do
     #if [ "${BLACKLISTED_COMMAND}" == "${COMMAND_PREFIX}" ] ; then
     if [ `echo ${COMMAND} | grep -wc $BLACKLISTED_COMMAND` == 1 ] ; then
-        echo -e "\033[31mSorry! The command \033[33m\"${BLACKLISTED_COMMAND}\"\033[31m is blacklisted. \033[0m"
+        #echo -e "\033[31mSorry! The command \033[33m\"${BLACKLISTED_COMMAND}\"\033[31m is blacklisted. \033[0m"
+        echo -e "\033[31mSorry! The keyword \033[33m\"${BLACKLISTED_COMMAND}\"\033[31m is blacklisted. \033[0m"
         exit 1
     fi
 done
