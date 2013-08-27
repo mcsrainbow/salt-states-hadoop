@@ -1,7 +1,6 @@
 # .bashrc
 
 # User specific aliases and functions
-
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -13,3 +12,6 @@ fi
 
 # Fix the messy code when using the Backspace
 stty erase ^h
+
+# User specific aliases
+alias salt-cmd='/srv/tools/execute_salt_cmd.run.sh'

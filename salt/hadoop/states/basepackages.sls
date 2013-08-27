@@ -1,3 +1,9 @@
+include:
+  - users.states.sudo
+  - common.states.epel
+  - common.states.syncdir
+  - common.states.hosts
+
 cloudera-cdh3u6.repo:
   file.managed:
     - name: '/etc/yum.repos.d/cloudera-cdh3u6.repo'

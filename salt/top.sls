@@ -1,14 +1,16 @@
 base:
   '*':
     - users.states.create
+    - users.states.sudo
     - common.states.epel
     - common.states.syncdir
+    - common.states.hosts
 
-  'symbio1.heylinux.com':
+  'demoenv-master':
     - hadoop.states.namenode
     - hadoop.states.hbasemaster
 
-  'symbio2.heylinux.com':
+  'demoenv-secondary':
     - hadoop.states.secondarynamenode
     - hadoop.states.jobtracker
     - hadoop.states.hiveserver
@@ -16,10 +18,8 @@ base:
     - hadoop.states.oozie
     - hadoop.states.sqoop
   
-  'symbio[1-3].heylinux.com':
+  'demoenv-node-[1-3]':
     - hadoop.states.zookeeperserver
-
-  'symbio[3,5-7].heylinux.com':
     - hadoop.states.datanode
     - hadoop.states.tasktracker
     - hadoop.states.hbaseregionserver

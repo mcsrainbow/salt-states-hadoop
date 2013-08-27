@@ -13,7 +13,7 @@ function format_namenode()
 {
     check_root
 
-    DATA_DIR=/mnt/disk1/hadoop/tmp
+    DATA_DIR=/data/hadoop/tmp
     
     if [ ! -d $DATA_DIR ]; then
         echo "The hadop.tmp.dir: $DATA_DIR/hadoop-hdfs dose not exist."

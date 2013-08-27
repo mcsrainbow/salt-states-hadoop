@@ -1,0 +1,13 @@
+## Managed by Salt
+#
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+# DemoEnvHosts START
+192.168.92.143 demoenv-master
+192.168.92.144 demoenv-secondary
+
+192.168.92.145 demoenv-node-1
+192.168.92.146 demoenv-node-2
+192.168.92.147 demoenv-node-3
+# DemoEnvHosts END

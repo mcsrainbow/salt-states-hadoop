@@ -1,2 +1,2 @@
 users:
-  dong.guo: 501
+  fabric: 501

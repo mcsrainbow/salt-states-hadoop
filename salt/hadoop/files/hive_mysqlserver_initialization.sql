@@ -8,3 +8,6 @@ REVOKE ALTER,CREATE ON metastore.* FROM '{{ pillar['hadoop']['hive_user'] }}'@'%
 CREATE USER '{{ pillar['hadoop']['hive_user'] }}'@'localhost' IDENTIFIED BY '{{ pillar['hadoop']['hive_password'] }}';
 GRANT SELECT,INSERT,UPDATE,DELETE ON metastore.* TO '{{ pillar['hadoop']['hive_user'] }}'@'localhost';
 REVOKE ALTER,CREATE ON metastore.* FROM '{{ pillar['hadoop']['hive_user'] }}'@'localhost';
+CREATE USER '{{ pillar['hadoop']['hive_user'] }}'@'{{ pillar['hadoop']['hive_server'] }}' IDENTIFIED BY '{{ pillar['hadoop']['hive_password'] }}';
+GRANT SELECT,INSERT,UPDATE,DELETE ON metastore.* TO '{{ pillar['hadoop']['hive_user'] }}'@'{{ pillar['hadoop']['hive_server'] }}';
+REVOKE ALTER,CREATE ON metastore.* FROM '{{ pillar['hadoop']['hive_user'] }}'@'{{ pillar['hadoop']['hive_server'] }}';

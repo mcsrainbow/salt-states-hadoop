@@ -3,11 +3,11 @@ base:
     - users.lists
     - hadoop.params
   
-  'symbio1.heylinux.com':
-    - hosts.symbio1.params
+  'demoenv-node-1':
+    - hosts.node1.params
 
-  'symbio2.heylinux.com':
-    - hosts.symbio2.params
+  'demoenv-node-2':
+    - hosts.node2.params
 
-  'symbio3.heylinux.com':
-    - hosts.symbio3.params
+  'demoenv-node-3':
+    - hosts.node3.params

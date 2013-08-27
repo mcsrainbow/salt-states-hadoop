@@ -30,7 +30,7 @@ function install_salt()
 
 function configure_salt()
 {
-  master="10.197.31.234"
+  master="192.168.92.143"
     
   grep $master /etc/salt/minion 
   if [ $? -ne 0 ]; then
