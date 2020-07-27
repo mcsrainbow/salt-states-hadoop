@@ -1,3 +1,3 @@
-The Salt States for Hadoop
-=========================
-Including HDFS, HBase, Zookeeper, Hive, Pig, Oozie, Sqoop <br />
+### Salt States of Hadoop
+
+HDFS, HBase, Zookeeper, Hive, Pig, Oozie, Sqoop
